@@ -1,0 +1,27 @@
+Guide Field,Synthetic Value
+Local Time Zone,Eastern (America/New_York)
+Video Eval Location,Emergency department patient room
+Thrombolytic,Alteplase
+Thrombolytic Mix Model,Pharmacy mixes; courier delivers to ED
+LVO Protocol,Not thrombectomy capable. Teleneurologist communicates LVO concern to primary provider. Primary provider contacts the synthetic Regional Transfer Hub; destination depends on bed availability.
+Wake Up Protocol,No
+Order Entry,No medication orders entered by teleneurologist
+Order Set Name,Hospital provider uses local stroke order set
+Charge Entry,No
+Required Note Title,Neuro Tele Consult
+Consult Completion Rule,Do not complete the consult in Synapse until the hospital provider confirms the patient plan
+Rounding Process,House supervisor calls Sevaro operations to initiate rounding
+When Do We Round?,"Tuesday, Thursday, Saturday"
+Rounding Timing,0730-1030 Eastern Time
+Rounding Orders,No
+General Neurology,Sevaro is the only inpatient neurology service
+Pediatric Neurology,Transfer to regional pediatric center
+Cardiovascular Services,Mon-Fri 0800-1700
+Carotid Ultrasound,Mon-Fri 0700-1600
+Cardiac Monitoring,Inpatient telemetry; outpatient monitoring arranged after discharge
+EEG,Tue/Thu 0800-1500 [last verified 2025-06-10]
+TEE,Tue-Fri 0800-1500
+Stress Testing,Mon-Fri 0700-1400
+PT/OT/ST,PT daily; OT Mon-Fri; ST Mon/Wed/Fri
+Specialty Labs,Apex Reference Labs - synthetic
+
