@@ -1,0 +1,26 @@
+Guide Field,Synthetic Value
+Local Time Zone,Central (America/Chicago)
+Video Eval Location,Patient room; portable cart to CT when requested
+Thrombolytic,Tenecteplase
+Thrombolytic Mix Model,ED pharmacist prepares during staffed hours; nursing mixes overnight [last verified 2025-08-15]
+LVO Protocol,"Thrombectomy capable Mon-Fri 0700-1900. During coverage, teleneurologist activates the synthetic EVT team. Outside coverage, ED provider initiates transfer to a regional comprehensive stroke center."
+Wake Up Protocol,Yes
+Order Entry,Thrombolytic order set only
+Order Set Name,"Search ""HVH Telestroke"" - ""Acute Ischemic Stroke - Tenecteplase [SYN-66018]"""
+Charge Entry,No
+Required Note Title,MD Progress Note - Neuro
+Rounding Process,Unit clerk sends request through hospital workflow queue
+When Do We Round?,Monday-Saturday
+Rounding Timing,0800-1500 Central Time
+Rounding Orders,No
+General Neurology,Local neurologist until 1700; Sevaro nights and overflow
+Pediatric Neurology,Children's specialty network; phone consultation first
+Cardiovascular Services,Daily 0700-1900
+Carotid Ultrasound,Mon-Sat 0700-1800
+Cardiac Monitoring,Telemetry 24/7; outpatient patch monitor
+EEG,Daily 0700-1900; continuous EEG unavailable
+TEE,Mon-Fri 0700-1700
+Stress Testing,Mon-Sat 0700-1500
+PT/OT/ST,PT/OT daily; ST Mon-Sat
+Specialty Labs,Meridian Diagnostics - synthetic
+
