@@ -1,0 +1,9 @@
+[
+  {"id":"SYN-001","name":"Cedar Ridge Medical Center","file":"cedar-ridge-medical-center.csv"},
+  {"id":"SYN-002","name":"Bluewater Regional Hospital","file":"bluewater-regional-hospital.csv"},
+  {"id":"SYN-003","name":"Redwood University Medical Center","file":"redwood-university-medical-center.csv"},
+  {"id":"SYN-004","name":"Meadowlands Community Hospital","file":"meadowlands-community-hospital.csv"},
+  {"id":"SYN-005","name":"Suncrest Medical Pavilion","file":"suncrest-medical-pavilion.csv"},
+  {"id":"SYN-006","name":"Highland Valley Hospital","file":"highland-valley-hospital.csv"},
+  {"id":"SYN-007","name":"Silver Oak Health Center","file":"silver-oak-health-center.csv"}
+]
