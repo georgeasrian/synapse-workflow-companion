@@ -1,0 +1,14 @@
+{
+  "hospital_id": "SYN-006",
+  "consult_type": "Stroke",
+  "encounter_type": "Acute",
+  "caselog_step": "Imaging",
+  "field_event": {
+    "field": "lvo_present",
+    "value": true
+  },
+  "local_time": "2026-03-17T19:30:00-05:00",
+  "local_timezone": "America/Chicago",
+  "provider_timezone": "America/New_York",
+  "charge_entered": false
+}

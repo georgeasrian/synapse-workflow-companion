@@ -1,0 +1,22 @@
+[
+ {"id":"V01","hospital_id":"SYN-001","question":"Where should I perform the video evaluation?","local_time":"2026-03-17T14:00","status":"answered","must_include":["emergency department patient room"]},
+ {"id":"V02","hospital_id":"SYN-002","question":"What is the LVO workflow?","local_time":"2026-03-17T14:00","status":"answered","must_include":["metro neuroscience institute"]},
+ {"id":"V03","hospital_id":"SYN-003","question":"Can I place inpatient neurology orders during rounding?","local_time":"2026-03-17T09:00","status":"answered","must_include":["inpatient neurology orders permitted"]},
+ {"id":"V04","hospital_id":"SYN-004","question":"Is EEG available on Friday?","local_time":"2026-03-20T10:00","status":"not in guide","must_include":["tue/thu","do not assume"]},
+ {"id":"V05","hospital_id":"SYN-005","question":"Does the hospital have CT perfusion?","local_time":"2026-03-17T14:00","status":"answered","must_include":["no"]},
+ {"id":"V06","hospital_id":"SYN-006","question":"What is the LVO pathway after 1900 on a weekday?","local_time":"2026-03-17T19:30","status":"time dependent","must_include":["transfer"],"must_exclude":["activates the synthetic evt team"]},
+ {"id":"V07","hospital_id":"SYN-007","question":"Which order set should I use?","local_time":"2026-03-17T14:00","status":"answered","must_include":["not applicable"]},
+ {"id":"V08","hospital_id":"SYN-001","question":"Patient has an LVO. What do I do?","local_time":"2026-03-17T22:30","status":"time dependent","must_include":["coverage hours","transfer"]},
+ {"id":"V09","hospital_id":"SYN-006","question":"Patient has an LVO. Do I activate the EVT team?","local_time":"2026-03-21T10:00","status":"time dependent","must_include":["no","transfer"]},
+ {"id":"V10","hospital_id":"SYN-007","question":"Can I sign off now?","local_time":"2026-03-17T14:00","status":"hard stop","must_include":["charge"]},
+ {"id":"V11","hospital_id":"SYN-005","question":"Can I change the antiplatelet during rounding?","local_time":"2026-03-17T10:00","status":"answered","must_include":["co-sign"]},
+ {"id":"V12","hospital_id":"SYN-002","question":"Where do I do the video eval for a stroke alert?","local_time":"2026-03-17T14:00","status":"conflict","must_include":["ct holding bay","patient room"]},
+ {"id":"V13","hospital_id":"SYN-004","question":"Is EEG available on Thursday?","local_time":"2026-03-19T10:00","status":"stale","must_include":["2025-06-10"]},
+ {"id":"V14","hospital_id":"SYN-002","question":"Who covers pediatric neurology?","local_time":"2026-03-17T14:00","status":"not in guide","must_include":["not available"]},
+ {"id":"V15","hospital_id":"SYN-005","question":"Which thrombolytic order set do I search for?","local_time":"2026-03-17T14:00","status":"answered","must_include":["syn-55190"]},
+ {"id":"V16","hospital_id":"SYN-007","question":"Can I get CT perfusion on Saturday?","local_time":"2026-03-21T11:00","status":"time dependent","must_include":["no","mon-fri 0700-1900"]},
+ {"id":"V17","hospital_id":"SYN-002","question":"Is the rounding window open? (Provider is in Eastern time.)","local_time":"2026-03-17T08:15","provider_timezone":"America/New_York","status":"time dependent","must_include":["not yet","15 min","10:30"]},
+ {"id":"V18","hospital_id":"SYN-006","question":"Who mixes the TNK?","local_time":"2026-03-18T20:00","status":"time dependent","must_include":["staffed","stale"]},
+ {"id":"V19","hospital_id":"SYN-003","question":"What should I title the note?","local_time":"2026-03-17T14:00","status":"answered","must_include":["neurology consult - remote"]},
+ {"id":"V20","hospital_id":"SYN-005","question":"What note title is required?","local_time":"2026-03-17T14:00","status":"not in guide","must_include":["not available"]}
+]

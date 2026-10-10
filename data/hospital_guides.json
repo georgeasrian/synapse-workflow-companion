@@ -1,0 +1,865 @@
+{
+  "encounter_reference_date": "2026-03-17",
+  "stale_after_days": 180,
+  "hospitals": [
+    {
+      "hospital_id": "SYN-001",
+      "hospital_name": "Cedar Ridge Medical Center",
+      "local_timezone": "America/Chicago",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "Emergency department patient room",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Alteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "Pharmacy prepares and delivers to bedside",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Thrombectomy capable during staffed neurointerventional coverage. Teleneurologist alerts ED provider and activates the synthetic neurovascular response line. Outside coverage hours, use the transfer pathway.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "Thrombolytic order set and post-treatment monitoring orders only",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Search \"Acute Stroke Remote\" - \"CRMC Acute Ischemic Stroke - Alteplase [SYN-41021]\"",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Required Note Title",
+          "value": "Tele-Neurology Consult",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Hospitalist service sends daily census to the rounding queue by 0630 Central Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Monday-Friday",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0700-1100 Central Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "No routine orders",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "General Neurology",
+          "value": "Local group covers outpatient; Sevaro covers inpatient tele-neurology",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Pediatric Neurology",
+          "value": "Regional children's center via transfer line",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Mon-Sat 0700-1900",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Head",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CTA Head/Neck",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Perfusion",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "MRI",
+          "value": "Daily 0600-2300; overnight on-call",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "AI",
+          "value": "RapidView Neuro - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR",
+          "value": "MedAxis - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PACS",
+          "value": "NovaPACS - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "VPN",
+          "value": "SecureBridge - synthetic",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-002",
+      "hospital_name": "Bluewater Regional Hospital",
+      "local_timezone": "America/Denver",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "CT holding bay for stroke alerts; patient room for other consults",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Tenecteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "ED nurse mixes from stroke kit after verification",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Not thrombectomy capable. Teleneurologist communicates suspected LVO to ED provider. ED provider activates transfer center. Synthetic preferred destination: Metro Neuroscience Institute.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "Thrombolytic order entry only",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Search \"Neuro TNK\" - \"BWRH Stroke - Tenecteplase [SYN-88210]\"",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Charge nurse initiates rounding request in Synapse",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Daily",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0830-1200 Mountain Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiovascular Services",
+          "value": "Mon-Fri 0700-1800; weekend on-call",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Carotid Ultrasound",
+          "value": "Daily 0800-1700",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiac Monitoring",
+          "value": "Inpatient telemetry 24/7; outpatient monitor via cardiology clinic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Mon-Fri 0700-1700",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "TEE",
+          "value": "Mon-Fri 0800-1600",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PT/OT/ST",
+          "value": "PT daily; OT Mon-Sat; ST Mon-Fri",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Specialty Labs",
+          "value": "ReferenceLab North - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR",
+          "value": "CareSphere - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PACS",
+          "value": "ImageHarbor - synthetic",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-003",
+      "hospital_name": "Redwood University Medical Center",
+      "local_timezone": "America/Los_Angeles",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "Patient room",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Tenecteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "Pharmacy verifies; ED nurse mixes and administers",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Thrombectomy capable 24/7. Teleneurologist communicates LVO concern to ED provider and activates the synthetic Neurointerventional Hotline.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "Full acute stroke order set permitted",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Search \"RUMC Stroke Pathway\" - \"Acute Stroke / TNK / EVT Evaluation [SYN-73004]\"",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Required Note Title",
+          "value": "Neurology Consult - Remote",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Scheduled inpatient list appears automatically in Synapse",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Daily",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0600-1400 Pacific Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "Yes - inpatient neurology orders permitted",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "General Neurology",
+          "value": "Sevaro inpatient; university faculty outpatient",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Pediatric Neurology",
+          "value": "In-house pediatric neurology 24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Routine and continuous EEG 24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Head",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CTA Head/Neck",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Perfusion",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "MRI",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "AI",
+          "value": "NeuroSignal AI - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR",
+          "value": "Epic synthetic training tenant",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR Department Login Location",
+          "value": "RUMC TELE NEUROLOGY",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PACS",
+          "value": "VisionGrid - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "VPN",
+          "value": "CloudGate Health - synthetic",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-004",
+      "hospital_name": "Meadowlands Community Hospital",
+      "local_timezone": "America/New_York",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "Emergency department patient room",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Alteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "Pharmacy mixes; courier delivers to ED",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Not thrombectomy capable. Teleneurologist communicates LVO concern to primary provider. Primary provider contacts the synthetic Regional Transfer Hub; destination depends on bed availability.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "No medication orders entered by teleneurologist",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Hospital provider uses local stroke order set",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Required Note Title",
+          "value": "Neuro Tele Consult",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Consult Completion Rule",
+          "value": "Do not complete the consult in Synapse until the hospital provider confirms the patient plan",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "House supervisor calls Sevaro operations to initiate rounding",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Tuesday, Thursday, Saturday",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0730-1030 Eastern Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "General Neurology",
+          "value": "Sevaro is the only inpatient neurology service",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Pediatric Neurology",
+          "value": "Transfer to regional pediatric center",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiovascular Services",
+          "value": "Mon-Fri 0800-1700",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Carotid Ultrasound",
+          "value": "Mon-Fri 0700-1600",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiac Monitoring",
+          "value": "Inpatient telemetry; outpatient monitoring arranged after discharge",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Tue/Thu 0800-1500",
+          "last_verified": "2025-06-10"
+        },
+        {
+          "field": "TEE",
+          "value": "Tue-Fri 0800-1500",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Stress Testing",
+          "value": "Mon-Fri 0700-1400",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PT/OT/ST",
+          "value": "PT daily; OT Mon-Fri; ST Mon/Wed/Fri",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Specialty Labs",
+          "value": "Apex Reference Labs - synthetic",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-005",
+      "hospital_name": "Suncrest Medical Pavilion",
+      "local_timezone": "America/New_York",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "CT room for stroke activation; ICU or patient room for inpatient consults",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Tenecteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "Pharmacy prepares after teleneurology recommendation",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Not thrombectomy capable. Teleneurologist informs ED provider and then calls the synthetic Transfer Command Center. Synthetic preferred destination: Capital Neurovascular Center.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "Thrombolytic and imaging orders permitted",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Search \"Stroke TeleCare\" - \"Suncrest Acute Stroke - TNK [SYN-55190]\"",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Hospitalist coordinator schedules rounding in Synapse one day in advance",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "As scheduled",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0700-1700 Eastern Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "Medication changes require hospitalist co-sign",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "VPN",
+          "value": "NorthPass - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR",
+          "value": "MedConnect One - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR Department Login Location",
+          "value": "SCMP REMOTE NEURO",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Head",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CTA Head/Neck",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Perfusion",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "AI",
+          "value": "ClarityLVO - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "MRI",
+          "value": "Mon-Fri 0500-2300; weekend 0700-1900; overnight call",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PACS",
+          "value": "ClearImage Enterprise - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Mon-Fri 0800-1800; weekend on-call",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-006",
+      "hospital_name": "Highland Valley Hospital",
+      "local_timezone": "America/Chicago",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "Patient room; portable cart to CT when requested",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Tenecteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "ED pharmacist prepares during staffed hours; nursing mixes overnight",
+          "last_verified": "2025-08-15"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Thrombectomy capable Mon-Fri 0700-1900. During coverage, teleneurologist activates the synthetic EVT team. Outside coverage, ED provider initiates transfer to a regional comprehensive stroke center.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "Yes",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "Thrombolytic order set only",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Search \"HVH Telestroke\" - \"Acute Ischemic Stroke - Tenecteplase [SYN-66018]\"",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Required Note Title",
+          "value": "MD Progress Note - Neuro",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Unit clerk sends request through hospital workflow queue",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Monday-Saturday",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0800-1500 Central Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "General Neurology",
+          "value": "Local neurologist until 1700; Sevaro nights and overflow",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Pediatric Neurology",
+          "value": "Children's specialty network; phone consultation first",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiovascular Services",
+          "value": "Daily 0700-1900",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Carotid Ultrasound",
+          "value": "Mon-Sat 0700-1800",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Cardiac Monitoring",
+          "value": "Telemetry 24/7; outpatient patch monitor",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Daily 0700-1900; continuous EEG unavailable",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "TEE",
+          "value": "Mon-Fri 0700-1700",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Stress Testing",
+          "value": "Mon-Sat 0700-1500",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PT/OT/ST",
+          "value": "PT/OT daily; ST Mon-Sat",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Specialty Labs",
+          "value": "Meridian Diagnostics - synthetic",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    },
+    {
+      "hospital_id": "SYN-007",
+      "hospital_name": "Silver Oak Health Center",
+      "local_timezone": "America/New_York",
+      "fields": [
+        {
+          "field": "Video Eval Location",
+          "value": "Patient room",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic",
+          "value": "Alteplase",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Thrombolytic Mix Model",
+          "value": "ED nursing prepares from pharmacy-issued kit",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "LVO Protocol",
+          "value": "Not thrombectomy capable. Teleneurologist communicates LVO concern to ED provider; ED provider calls synthetic Statewide Transfer Access.",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Wake Up Protocol",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Entry",
+          "value": "No orders entered by teleneurologist",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Order Set Name",
+          "value": "Not applicable",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Charge Entry",
+          "value": "Yes - tele-neurology encounter charge before sign-off",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Required Note Title",
+          "value": "Tele-Neurology Encounter",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Process",
+          "value": "Hospitalist sends secure message to initiate rounding",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "When Do We Round?",
+          "value": "Monday-Friday",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Timing",
+          "value": "0900-1300 Eastern Time",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "Rounding Orders",
+          "value": "No",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "VPN",
+          "value": "EdgeConnect Health - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR",
+          "value": "ClinixPro - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EHR Department Login Location",
+          "value": "SOHC NEUROLOGY REMOTE",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Head",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CTA Head/Neck",
+          "value": "24/7",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "CT Perfusion",
+          "value": "Mon-Fri 0700-1900",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "AI",
+          "value": "None",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "MRI",
+          "value": "Daily 0700-2200; no overnight coverage",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "PACS",
+          "value": "RadiantView - synthetic",
+          "last_verified": "2026-02-02"
+        },
+        {
+          "field": "EEG",
+          "value": "Mon-Fri 0900-1600",
+          "last_verified": "2026-02-02"
+        }
+      ]
+    }
+  ]
+}

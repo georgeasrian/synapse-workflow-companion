@@ -1,0 +1,12 @@
+caselog_step,caselog_field,trigger,guide_fields,default_tier
+Intake,Reason for consult / hospital selected,Encounter opened for a hospital,Video Eval Location; Wake Up Protocol,Info
+History,Last known well = Unknown,Toggle set to Unknown,Wake Up Protocol,Advisory
+History,Allergies,Thrombolytic allergy entered,Thrombolytic,Advisory
+Imaging,CTA done = Yes,CTA result being entered,CT Perfusion; AI,Info
+Imaging,Large vessel occlusion present = Yes,Set to Yes,LVO Protocol (evaluate against local time),Advisory
+Recommendation,Thrombolytic given = Yes,Set to Yes,Thrombolytic; Thrombolytic Mix Model; Order Entry; Order Set Name,Advisory
+Recommendation,Thrombolytic order placed in EHR?,Field displayed,Order Entry; Order Set Name,Advisory
+Recommendation,Assessment / plan,Seizure or EEG mentioned,EEG (evaluate against local time),Info
+Note,Note title,Note being created,Required Note Title,Advisory
+Sign-off,Complete consult,Provider clicks Complete,Charge Entry; Consult Completion Rule,Hard stop
+Rounding,Rounding encounter opened,Encounter type = Rounding,Rounding Timing; Rounding Orders,Info
