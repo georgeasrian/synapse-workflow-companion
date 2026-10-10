@@ -1,0 +1,92 @@
+[
+  {
+    "id": "N1",
+    "hospital_id": "SYN-002",
+    "consult_type": "Stroke",
+    "caselog_step": "Imaging",
+    "field_event": "LVO present = Yes",
+    "local_time": "Tue 14:00 Mountain",
+    "expected": "Advisory: not thrombectomy capable. Tell the ED provider; they activate the transfer center. Preferred destination: Metro Neuroscience Institute.",
+    "source_fields": "LVO Protocol"
+  },
+  {
+    "id": "N2",
+    "hospital_id": "SYN-006",
+    "consult_type": "Stroke",
+    "caselog_step": "Imaging",
+    "field_event": "LVO present = Yes",
+    "local_time": "Tue 19:30 Central",
+    "expected": "Advisory: outside the EVT window (Mon-Fri 0700-1900). ED provider initiates transfer. Must not suggest activating the EVT team.",
+    "source_fields": "LVO Protocol"
+  },
+  {
+    "id": "N3",
+    "hospital_id": "SYN-003",
+    "consult_type": "Stroke",
+    "caselog_step": "History",
+    "field_event": "Last known well = Unknown",
+    "local_time": "Tue 03:10 Pacific",
+    "expected": "Advisory: wake-up protocol is in use at this hospital.",
+    "source_fields": "Wake Up Protocol"
+  },
+  {
+    "id": "N4",
+    "hospital_id": "SYN-004",
+    "consult_type": "Stroke",
+    "caselog_step": "Recommendation",
+    "field_event": "Thrombolytic given = Yes",
+    "local_time": "Tue 16:00 Eastern",
+    "expected": "Advisory: teleneurologist does not enter medication orders; hospital provider uses the local order set. No order-set name nudge.",
+    "source_fields": "Order Entry; Order Set Name"
+  },
+  {
+    "id": "N5",
+    "hospital_id": "SYN-007",
+    "consult_type": "Stroke",
+    "caselog_step": "Sign-off",
+    "field_event": "Complete clicked; charge not entered",
+    "local_time": "Tue 14:00 Eastern",
+    "expected": "Hard stop: tele-neurology encounter charge required before sign-off.",
+    "source_fields": "Charge Entry"
+  },
+  {
+    "id": "N6",
+    "hospital_id": "SYN-005",
+    "consult_type": "Stroke",
+    "caselog_step": "Imaging",
+    "field_event": "CTA done = Yes",
+    "local_time": "Tue 14:00 Eastern",
+    "expected": "Info: CT perfusion not available; AI is ClarityLVO.",
+    "source_fields": "CT Perfusion; AI"
+  },
+  {
+    "id": "N7",
+    "hospital_id": "SYN-004",
+    "consult_type": "General Neuro",
+    "caselog_step": "Sign-off",
+    "field_event": "Complete clicked",
+    "local_time": "Tue 15:00 Eastern",
+    "expected": "Hard stop: do not complete until the hospital provider confirms the plan.",
+    "source_fields": "Consult Completion Rule"
+  },
+  {
+    "id": "N8",
+    "hospital_id": "SYN-002",
+    "consult_type": "General Neuro",
+    "caselog_step": "History",
+    "field_event": "Allergies entered: none",
+    "local_time": "Tue 14:00 Mountain",
+    "expected": "No nudge. Nothing in the guide applies; staying quiet is the correct behavior.",
+    "source_fields": "(none)"
+  },
+  {
+    "id": "N9",
+    "hospital_id": "SYN-001",
+    "consult_type": "Rounding",
+    "caselog_step": "Rounding",
+    "field_event": "Encounter opened",
+    "local_time": "Sun 08:00 Central",
+    "expected": "Info: this hospital rounds Monday-Friday only; check why a Sunday rounding encounter exists.",
+    "source_fields": "When Do We Round?"
+  }
+]
