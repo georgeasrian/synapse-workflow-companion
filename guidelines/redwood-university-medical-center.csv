@@ -1,0 +1,28 @@
+Guide Field,Synthetic Value
+Local Time Zone,Pacific (America/Los_Angeles)
+Video Eval Location,Patient room
+Thrombolytic,Tenecteplase
+Thrombolytic Mix Model,Pharmacy verifies; ED nurse mixes and administers
+LVO Protocol,Thrombectomy capable 24/7. Teleneurologist communicates LVO concern to ED provider and activates the synthetic Neurointerventional Hotline.
+Wake Up Protocol,Yes
+Order Entry,Full acute stroke order set permitted
+Order Set Name,"Search ""RUMC Stroke Pathway"" - ""Acute Stroke / TNK / EVT Evaluation [SYN-73004]"""
+Charge Entry,No
+Required Note Title,Neurology Consult - Remote
+Rounding Process,Scheduled inpatient list appears automatically in Synapse
+When Do We Round?,Daily
+Rounding Timing,0600-1400 Pacific Time
+Rounding Orders,Yes - inpatient neurology orders permitted
+General Neurology,Sevaro inpatient; university faculty outpatient
+Pediatric Neurology,In-house pediatric neurology 24/7
+EEG,Routine and continuous EEG 24/7
+CT Head,24/7
+CTA Head/Neck,24/7
+CT Perfusion,24/7
+MRI,24/7
+AI,NeuroSignal AI - synthetic
+EHR,Epic synthetic training tenant
+EHR Department Login Location,RUMC TELE NEUROLOGY
+PACS,VisionGrid - synthetic
+VPN,CloudGate Health - synthetic
+
