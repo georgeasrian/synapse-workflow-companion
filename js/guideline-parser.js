@@ -10,7 +10,7 @@ export function guidelineFromCsv(text,fileName,metadata={}) {
   const rows=parsed.slice(1).filter(row=>row[0] && row[1]).map(([field,value])=>({field,value}));
   if(!rows.length) throw new Error("No guideline rows were found in this CSV.");
   const fields=Object.fromEntries(rows.map(({field,value})=>[field.trim().toLowerCase(),value.trim()]));
-  const identifier=metadata.id || text.match(/\bSYN[-_ ]?\d{3}\b/i)?.[0]?.replace(/[_ ]/g,"-") || fileName.match(/syn[_-]?\d{3}/i)?.[0]?.replace(/[_ ]/g,"-").toUpperCase() || "IMPORTED";
+  const identifier=metadata.id || text.match(/\bSYN[-_ ]?\d{3}\b/i)?.[0]?.replace(/[_ ]/g,"-") || fileName.match(/syn[_-]?\d{3}/i)?.[0]?.replace(/[_ ]/g,"-").toUpperCase() || "CUSTOM-"+(fields["hospital id"] || fields["hospital name"] || titleFromFilename(fileName)).replace(/[^a-z0-9]+/gi,"-").replace(/^-|-$/g,"").toUpperCase();
   return {id:identifier.toUpperCase(),name:metadata.name || fields["hospital name"] || titleFromFilename(fileName),rows,fields,imported:Boolean(metadata.imported),fileName};
 }
 export function savedImports(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]");}catch{return [];}}
