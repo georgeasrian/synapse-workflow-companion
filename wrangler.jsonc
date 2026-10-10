@@ -1,0 +1,5 @@
+{
+  "name": "axon-chatbot",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-10"
+}
