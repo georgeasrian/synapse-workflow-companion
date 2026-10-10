@@ -1,0 +1,25 @@
+Guide Field,Synthetic Value
+Local Time Zone,Eastern (America/New_York)
+Video Eval Location,CT room for stroke activation; ICU or patient room for inpatient consults
+Thrombolytic,Tenecteplase
+Thrombolytic Mix Model,Pharmacy prepares after teleneurology recommendation
+LVO Protocol,Not thrombectomy capable. Teleneurologist informs ED provider and then calls the synthetic Transfer Command Center. Synthetic preferred destination: Capital Neurovascular Center.
+Wake Up Protocol,Yes
+Order Entry,Thrombolytic and imaging orders permitted
+Order Set Name,"Search ""Stroke TeleCare"" - ""Suncrest Acute Stroke - TNK [SYN-55190]"""
+Charge Entry,Yes
+Rounding Process,Hospitalist coordinator schedules rounding in Synapse one day in advance
+When Do We Round?,As scheduled
+Rounding Timing,0700-1700 Eastern Time
+Rounding Orders,Medication changes require hospitalist co-sign
+VPN,NorthPass - synthetic
+EHR,MedConnect One - synthetic
+EHR Department Login Location,SCMP REMOTE NEURO
+CT Head,24/7
+CTA Head/Neck,24/7
+CT Perfusion,No
+AI,ClarityLVO - synthetic
+MRI,Mon-Fri 0500-2300; weekend 0700-1900; overnight call
+PACS,ClearImage Enterprise - synthetic
+EEG,Mon-Fri 0800-1800; weekend on-call
+
