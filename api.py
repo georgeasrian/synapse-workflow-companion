@@ -17,6 +17,7 @@ from fastapi.responses import FileResponse               # to serve the HTML pan
 from pydantic import BaseModel                           # describes the JSON we accept (and validates it)
 
 from engine.answers import answer                        # Step 6
+from engine.chat import chat_answer                      # Guideline-grounded OpenAI chat
 from engine.guides import KB, norm                       # Step 3
 from engine.nudges import run                            # Step 5
 
@@ -60,6 +61,15 @@ class Question(BaseModel):                   # for the chat box
     plan_confirmed: bool = False
 
 
+class ChatQuestion(BaseModel):
+    """The browser sends encounter state; the server retrieves the guide itself."""
+    hospital_id: str
+    question: str
+    local_time: str | None = None
+    encounter_state: dict = {}
+    conversation: list[dict] = []
+
+
 # ---------- 2. Endpoints (the URLs George's site can call) ----------
 @app.get("/health")
 def health():
@@ -85,6 +95,17 @@ def ask(q: Question):
     """Chat box question. Always returns status + sources."""
     return answer(kb, q.hospital_id, q.question, q.local_time, q.provider_timezone, q.charge_entered,
                   q.plan_confirmed)
+
+
+@app.post("/chat")
+@app.post("/api/chat")
+def chat(q: ChatQuestion):
+    """OpenAI-backed RAG chat. Retrieval is restricted to the selected hospital's guide."""
+    result = chat_answer(kb, q.hospital_id, q.question, q.encounter_state, q.local_time, q.conversation)
+    status = result.pop("status", 200)
+    if status >= 400:
+        raise HTTPException(status, result.get("error", "Chat is unavailable."))
+    return result
 
 
 @app.post("/hospitals")
