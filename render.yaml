@@ -1,0 +1,12 @@
+# Render blueprint: New + > Blueprint > pick this repo. Free plan sleeps after ~15 min idle - open /health before the demo.
+services:
+  - type: web
+    name: workflow-companion-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
