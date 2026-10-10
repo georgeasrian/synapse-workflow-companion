@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A CSV-driven workflow companion for telestroke consultations." />
+    <meta name="description" content="A data-driven workflow companion for telestroke consultations." />
     <title>Synapse Workflow Companion</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -11,20 +11,20 @@
     <main class="app-shell">
       <header class="hero">
         <p class="eyebrow">Synapse Workflow Companion</p>
-        <h1>Hospital-specific telestroke workflow, from a guideline CSV.</h1>
-        <p>Choose a bundled hospital or import a new guideline file to create a tailored workflow.</p>
+        <h1>Hospital-specific telestroke workflow, from your guide data.</h1>
+        <p>Choose a bundled hospital or import a CSV/JSON guideline file to create a tailored workflow.</p>
       </header>
       <section class="card import-card" aria-labelledby="import-heading">
         <div>
           <p class="eyebrow">Guideline library</p>
-          <h2 id="import-heading">Add a hospital guideline</h2>
-          <p class="muted">Drop one or more CSV files here. Imported hospitals are saved only in this browser.</p>
+          <h2 id="import-heading">Add a hospital guide or encounter context</h2>
+          <p class="muted">Drop CSV or JSON files here. New hospitals and reference data are stored only in this browser.</p>
         </div>
-        <label class="drop-zone" id="drop-zone" for="csv-input">
+        <label class="drop-zone" id="drop-zone" for="data-input">
           <span class="drop-icon" aria-hidden="true">↓</span>
-          <strong>Drag and drop guideline CSVs</strong>
+          <strong>Drag and drop CSV or JSON files</strong>
           <span>or choose files</span>
-          <input id="csv-input" type="file" accept=".csv,text/csv" multiple />
+          <input id="data-input" type="file" accept=".csv,.json,text/csv,application/json" multiple />
         </label>
         <p id="import-status" class="status" role="status"></p>
       </section>
@@ -39,6 +39,10 @@
       <section class="content-grid">
         <section class="card" aria-labelledby="guideline-heading"><p class="eyebrow">Selected guideline</p><h2 id="guideline-heading">Workflow details</h2><dl id="guide-details" class="guideline-list"></dl></section>
         <section class="card" aria-labelledby="steps-heading"><p class="eyebrow">Guided next steps</p><h2 id="steps-heading">Record the consult</h2><div id="actions" class="action-list"></div><p id="action-result" class="status" role="status"></p></section>
+      </section>
+      <section class="content-grid">
+        <section class="card" aria-labelledby="caselog-heading"><p class="eyebrow">Caselog integration</p><h2 id="caselog-heading">Event-to-guide mapping</h2><label>Caselog step <select id="caselog-step"></select></label><div id="caselog-map" class="reference-list"></div></section>
+        <section class="card" aria-labelledby="validation-heading"><p class="eyebrow">Quality checks</p><h2 id="validation-heading">Validation scenarios</h2><p class="muted">These are test cases for the nudge rules, not additional clinical guidance.</p><div id="validation-list" class="reference-list"></div></section>
       </section>
       <section class="card nudge-card" aria-labelledby="nudge-heading"><p class="eyebrow">Workflow nudge</p><h2 id="nudge-heading"></h2><p id="nudge-copy"></p><ol id="nudge-steps"></ol><p id="nudge-source" class="muted"></p></section>
     </main>
