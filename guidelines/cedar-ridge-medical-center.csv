@@ -1,0 +1,27 @@
+Guide Field,Synthetic Value
+Local Time Zone,Central (America/Chicago)
+Video Eval Location,Emergency department patient room
+Thrombolytic,Alteplase
+Thrombolytic Mix Model,Pharmacy prepares and delivers to bedside
+LVO Protocol,"Thrombectomy capable during staffed neurointerventional coverage. Teleneurologist alerts ED provider and activates the synthetic neurovascular response line. Outside coverage hours, use the transfer pathway."
+Wake Up Protocol,Yes
+Order Entry,Thrombolytic order set and post-treatment monitoring orders only
+Order Set Name,"Search ""Acute Stroke Remote"" - ""CRMC Acute Ischemic Stroke - Alteplase [SYN-41021]"""
+Charge Entry,No
+Required Note Title,Tele-Neurology Consult
+Rounding Process,Hospitalist service sends daily census to the rounding queue by 0630 Central Time
+When Do We Round?,Monday-Friday
+Rounding Timing,0700-1100 Central Time
+Rounding Orders,No routine orders
+General Neurology,Local group covers outpatient; Sevaro covers inpatient tele-neurology
+Pediatric Neurology,Regional children's center via transfer line
+EEG,Mon-Sat 0700-1900
+CT Head,24/7
+CTA Head/Neck,24/7
+CT Perfusion,24/7
+MRI,Daily 0600-2300; overnight on-call
+AI,RapidView Neuro - synthetic
+EHR,MedAxis - synthetic
+PACS,NovaPACS - synthetic
+VPN,SecureBridge - synthetic
+
