@@ -1,0 +1,26 @@
+Guide Field,Synthetic Value
+Local Time Zone,Eastern (America/New_York)
+Video Eval Location,Patient room
+Thrombolytic,Alteplase
+Thrombolytic Mix Model,ED nursing prepares from pharmacy-issued kit
+LVO Protocol,Not thrombectomy capable. Teleneurologist communicates LVO concern to ED provider; ED provider calls synthetic Statewide Transfer Access.
+Wake Up Protocol,No
+Order Entry,No orders entered by teleneurologist
+Order Set Name,Not applicable
+Charge Entry,Yes - tele-neurology encounter charge before sign-off
+Required Note Title,Tele-Neurology Encounter
+Rounding Process,Hospitalist sends secure message to initiate rounding
+When Do We Round?,Monday-Friday
+Rounding Timing,0900-1300 Eastern Time
+Rounding Orders,No
+VPN,EdgeConnect Health - synthetic
+EHR,ClinixPro - synthetic
+EHR Department Login Location,SOHC NEUROLOGY REMOTE
+CT Head,24/7
+CTA Head/Neck,24/7
+CT Perfusion,Mon-Fri 0700-1900
+AI,None
+MRI,Daily 0700-2200; no overnight coverage
+PACS,RadiantView - synthetic
+EEG,Mon-Fri 0900-1600
+
