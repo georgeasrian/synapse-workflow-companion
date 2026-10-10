@@ -1,0 +1,24 @@
+Guide Field,Synthetic Value
+Local Time Zone,Mountain (America/Denver)
+Video Eval Location,CT holding bay for stroke alerts; patient room for other consults
+Thrombolytic,Tenecteplase
+Thrombolytic Mix Model,ED nurse mixes from stroke kit after verification
+LVO Protocol,Not thrombectomy capable. Teleneurologist communicates suspected LVO to ED provider. ED provider activates transfer center. Synthetic preferred destination: Metro Neuroscience Institute.
+Wake Up Protocol,No
+Order Entry,Thrombolytic order entry only
+Order Set Name,"Search ""Neuro TNK"" - ""BWRH Stroke - Tenecteplase [SYN-88210]"""
+Charge Entry,Yes
+Rounding Process,Charge nurse initiates rounding request in Synapse
+When Do We Round?,Daily
+Rounding Timing,0830-1200 Mountain Time
+Rounding Orders,No
+Cardiovascular Services,Mon-Fri 0700-1800; weekend on-call
+Carotid Ultrasound,Daily 0800-1700
+Cardiac Monitoring,Inpatient telemetry 24/7; outpatient monitor via cardiology clinic
+EEG,Mon-Fri 0700-1700
+TEE,Mon-Fri 0800-1600
+PT/OT/ST,PT daily; OT Mon-Sat; ST Mon-Fri
+Specialty Labs,ReferenceLab North - synthetic
+EHR,CareSphere - synthetic
+PACS,ImageHarbor - synthetic
+
