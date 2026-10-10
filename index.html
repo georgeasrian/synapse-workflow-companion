@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Synapse Workflow Companion</title>
+    <title>Axon</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> Synapse <span>Workflow Companion</span></div><div>Tele-neurology · Active consultation</div></header>
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> Axon <span>Workflow Companion</span></div><div>Tele-neurology · Active consultation</div></header>
     <main class="layout">
       <section class="main-column">
         <div class="case-head"><div><p class="eyebrow">Active consultation</p><h1>Acute stroke workflow</h1><p>Hospital-specific guidance follows the selected guide and encounter state.</p></div><span class="status-pill">● In progress</span></div>
         <section class="card import-card"><div><p class="eyebrow">Guideline library</p><h2>Add a hospital guide</h2><p class="muted">Import CSV or JSON data for a new hospital, guide pack, or encounter context.</p></div><label class="drop-zone" id="drop-zone" for="data-input"><strong>Drag and drop CSV or JSON</strong><span>or choose files</span><input id="data-input" type="file" accept=".csv,.json,text/csv,application/json" multiple /></label><p id="import-status" class="status" role="status"></p></section>
         <section class="card"><h2>Consultation context</h2><div class="field-grid"><label>Hospital <select id="hospital"></select></label><label>Consultation time (hospital local)<input id="consult-time" type="datetime-local" /><small id="time-source">Auto-populated from your current time.</small></label></div><fieldset class="lvo-fieldset"><legend>Current LVO state</legend><div class="binary-group" id="lvo-controls"><button type="button" data-lvo="yes">Yes</button><button type="button" data-lvo="no">No</button><button type="button" data-lvo="not-assessed">Not assessed</button></div></fieldset></section>
-        <section class="card"><p class="eyebrow">Live caselog</p><h2>Encounter Steps</h2><p id="recommended-step" class="recommended"></p><div id="workflow-state" class="encounter-steps"></div></section>
-        <section class="card"><p class="eyebrow">Guided next steps</p><h2>Record the consult</h2><div id="actions" class="action-list"></div><p id="action-result" class="status" role="status"></p></section>
+        <section class="card"><p class="eyebrow">Live workflow</p><h2>Encounter Steps</h2><p class="muted">Check each completed step. The recommendation updates from this eight-step workflow and the selected hospital guide.</p><div id="workflow-state" class="encounter-steps"></div></section>
         <section class="card"><p class="eyebrow">Selected guideline</p><h2>Workflow details</h2><dl id="guide-details" class="guideline-list"></dl></section>
         <section class="card"><p class="eyebrow">Quality checks</p><h2>Validation scenarios</h2><div id="validation-list" class="reference-list"></div></section>
       </section>
-      <aside class="nudge-panel"><p class="eyebrow">Workflow alert</p><h2 id="nudge-heading"></h2><p id="nudge-copy"></p><ol id="nudge-steps"></ol><p id="nudge-source"></p><div class="map-section"><h3>Guide mapping</h3><label>Caselog step <select id="caselog-step"></select></label><div id="caselog-map" class="reference-list"></div></div></aside>
+      <aside class="nudge-panel"><p class="eyebrow">Recommended next step</p><h2 id="nudge-heading"></h2><p id="nudge-copy"></p><ol id="nudge-steps"></ol><p id="nudge-source"></p></aside>
     </main>
     <script>
       window.addEventListener("error", event => { document.querySelector("#import-status").textContent = "Startup error: " + event.message; });
