@@ -68,6 +68,9 @@ class ChatQuestion(BaseModel):
     local_time: str | None = None
     encounter_state: dict = {}
     conversation: list[dict] = []
+    # Storyboard uploads are session-local in the browser. Only notes for the
+    # selected hospital are sent here and may be retrieved for this answer.
+    storyboard_notes: list[dict] = []
 
 
 # ---------- 2. Endpoints (the URLs George's site can call) ----------
@@ -100,8 +103,9 @@ def ask(q: Question):
 @app.post("/chat")
 @app.post("/api/chat")
 def chat(q: ChatQuestion):
-    """OpenAI-backed RAG chat. Retrieval is restricted to the selected hospital's guide."""
-    result = chat_answer(kb, q.hospital_id, q.question, q.encounter_state, q.local_time, q.conversation)
+    """OpenAI-backed RAG chat over the selected guide and storyboard notes."""
+    result = chat_answer(kb, q.hospital_id, q.question, q.encounter_state, q.local_time,
+                         q.conversation, q.storyboard_notes)
     status = result.pop("status", 200)
     if status >= 400:
         raise HTTPException(status, result.get("error", "Chat is unavailable."))
