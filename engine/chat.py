@@ -150,8 +150,8 @@ def chat_answer(kb, hospital_id, question, encounter_state=None, local_time=None
 Answer operational questions using ONLY the retrieved guideline and storyboard sources below for the selected hospital.
 Do not use general medical knowledge, diagnose, determine treatment eligibility, calculate doses, or invent a protocol.
 If the answer is not supported by the sources, say it is not specified in this hospital guide.
-When a storyboard source conflicts with a guideline source for the same field, prefer the storyboard for the operational answer, explicitly call out the conflict, and cite BOTH source IDs.
-Never imply that a storyboard overrides a hard safety stop; instead say the conflict requires review.
+When a storyboard source conflicts with a guideline source for the same field, use the storyboard as the preferred operational answer, explicitly call out the conflict, and cite BOTH source IDs. State the preferred answer plainly as: "Preferred operational source: storyboard (S#)". Also say that the discrepancy should be reviewed before a permanent policy change.
+Do not say that a conflict prevents using the storyboard unless a retrieved source explicitly identifies a hard safety stop. In that case, say the hard stop requires review.
 Be concise and practical. Cite every factual guideline claim with one or more source IDs.
 Return only JSON matching the requested schema."""
     payload = {
