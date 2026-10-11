@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Axon</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=12" />
     <link rel="stylesheet" href="css/sbar.css" />
     <link rel="stylesheet" href="css/workflow-enhancements.css" />
   </head>
@@ -21,10 +21,12 @@
         <button type="button" id="new-patient">New Patient</button>
         <section class="card"><p class="eyebrow">Selected guideline</p><h2>Workflow details</h2><dl id="guide-details" class="guideline-list"></dl></section>
         <section class="card chat-card" aria-labelledby="axon-chat-title"><p class="eyebrow">Guideline assistant</p><h2 id="axon-chat-title">Ask Axon</h2><p class="muted">Ask about the selected hospital’s workflow. Axon uses the loaded guideline and encounter-step state—not a general clinical knowledge base.</p><div class="chat-transcript" id="axon-chat-transcript" aria-live="polite"><p class="chat-empty">Select a hospital, then ask a workflow question.</p></div><form class="chat-form" id="axon-chat-form"><label class="sr-only" for="axon-chat-input">Question for Axon</label><textarea id="axon-chat-input" rows="3" maxlength="1200" placeholder="e.g., What is this hospital's LVO escalation pathway?"></textarea><div class="chat-actions"><small id="axon-chat-status">Synthetic/de-identified demo only.</small><button type="submit" id="axon-chat-submit">Ask Axon</button></div></form></section>
-        <section class="card"><p class="eyebrow">Quality checks</p><h2>Validation scenarios</h2><div id="validation-list" class="reference-list"></div></section>
+        <section class="card"><p class="eyebrow">Quality checks</p><h2>Validation scenarios</h2><p class="muted">Run deterministic checks against the currently loaded nudge service and hospital guide.</p><button type="button" id="run-validation">Run loaded checks</button><p id="validation-status" class="status" role="status"></p><div id="validation-list" class="reference-list"></div></section>
+        <section class="card"><p class="eyebrow">Session safety</p><h2>Guidance audit</h2><p id="guidance-health" class="muted">Guidance ready.</p><p id="audit-summary" class="muted">No nudges recorded in this browser session.</p></section>
       </section>
       <section class="rounding-view" id="rounding-view" hidden><div class="card"><p class="eyebrow">Hospital rounding</p><h1>Rounding schedule</h1><p class="muted">Select a hospital to review its local rounding guidance.</p><label>Hospital <select id="rounding-hospital"></select></label><div id="rounding-details" class="rounding-details"></div></div></section>
-      <aside class="nudge-panel" id="consult-nudge"><p class="eyebrow">Recommended next step</p><h2 id="nudge-heading"></h2><p id="nudge-copy"></p><ol id="nudge-steps"></ol><p id="nudge-source"></p></aside>
+      <aside class="nudge-panel" id="consult-nudge"><p class="eyebrow">Recommended next step</p><p id="nudge-status" class="nudge-status"></p><h2 id="nudge-heading"></h2><p id="nudge-copy"></p><ol id="nudge-steps"></ol><p id="nudge-source"></p></aside>
+      <aside class="card info-panel" id="info-panel" hidden><p class="eyebrow">Info for this step</p><div id="info-list" class="reference-list"></div></aside>
     </main>
     <div id="new-patient-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="new-patient-modal-title"><section class="modal-card"><p class="eyebrow">Start a new encounter</p><h2 id="new-patient-modal-title">Erase current patient data?</h2><p>Clicking this button erases all data from previous patient.</p><div class="modal-actions"><button type="button" id="new-patient-cancel">Cancel</button><button type="button" id="new-patient-confirm" class="danger-action">Continue</button></div></section></div>
     <div id="nihss-modal" class="modal-backdrop nihss-modal" hidden role="dialog" aria-modal="true" aria-labelledby="nihss-modal-title"><section class="modal-card nihss-modal-card"><div class="modal-title-row"><div><p class="eyebrow">Clinical reference</p><h2 id="nihss-modal-title">NIH Stroke Scale</h2></div><button type="button" id="nihss-close" class="modal-close" aria-label="Close NIH Stroke Scale">×</button></div><iframe id="nihss-document" src="assets/nih-stroke-scale.pdf#view=FitH" title="NIH Stroke Scale PDF" loading="lazy"></iframe></section></div>
@@ -33,7 +35,7 @@
       window.addEventListener("unhandledrejection", event => { document.querySelector("#import-status").textContent = "Startup error: " + (event.reason?.message || event.reason); });
     </script>
     <script src="js/config.js"></script>
-    <script type="module" src="js/app.js?v=11"></script>
+    <script type="module" src="js/app.js?v=12"></script>
     <script type="module" src="js/chat.js"></script>
   </body>
 </html>
