@@ -4,7 +4,7 @@ const input = $("#axon-chat-input");
 const transcript = $("#axon-chat-transcript");
 const status = $("#axon-chat-status");
 const submit = $("#axon-chat-submit");
-let context = { hospital: null, guidelineRows: [], encounterState: {}, lvoState: "not-assessed", consultationTime: "" };
+let context = { hospital: null, guidelineRows: [], storyboardNotes: [], encounterState: {}, lvoState: "not-assessed", consultationTime: "" };
 const conversation = [];
 
 function escapeHtml(value) {
@@ -17,7 +17,7 @@ function renderMessage(role, text, sources = [], caution = "") {
   transcript.querySelector(".chat-empty")?.remove();
   const item = document.createElement("article");
   item.className = "chat-message chat-message-" + role;
-  const citations = sources.length ? `<p class="chat-sources"><strong>Guideline source</strong> ${sources.map(source => `${escapeHtml(source.field)}: ${escapeHtml(source.value)}`).join(" · ")}</p>` : "";
+  const citations = sources.length ? `<p class="chat-sources">${sources.map(source => { const label=source.source_type==="storyboard"?"Storyboard":"Guideline"; const conflict=source.conflict?" — conflicts with the guideline":""; return `<strong>${label}</strong> ${escapeHtml(source.field)}: ${escapeHtml(source.value)}${conflict}`; }).join(" · ")}</p>` : "";
   item.innerHTML = `<strong>${role === "user" ? "You" : "Axon"}</strong><p>${escapeHtml(text)}</p>${citations}${caution ? `<small>${escapeHtml(caution)}</small>` : ""}`;
   transcript.append(item);
   transcript.scrollTop = transcript.scrollHeight;
@@ -61,7 +61,7 @@ form.addEventListener("submit", async event => {
   input.disabled = true;
   submit.disabled = true;
   status.dataset.loading = "true";
-  status.textContent = "Axon is checking this hospital's guideline…";
+  status.textContent = "Axon is checking the hospital guide and storyboard notes…";
   try {
     const response = await fetch(base + "/api/chat", {
       method: "POST",
@@ -73,6 +73,7 @@ form.addEventListener("submit", async event => {
         question,
         local_time: context.consultationTime || null,
         encounter_state: { ...context.encounterState, lvo_state: context.lvoState },
+        storyboard_notes: context.storyboardNotes || [],
         conversation: conversation.slice(-6),
       }),
     });
@@ -80,7 +81,7 @@ form.addEventListener("submit", async event => {
     if (!response.ok) throw new Error(data.error || "Axon is temporarily unavailable.");
     renderMessage("assistant", data.answer, data.sources || [], data.caution || "");
     conversation.push({ role: "assistant", content: data.answer });
-    status.textContent = "Answer grounded in the selected hospital guideline.";
+    status.textContent = "Answer grounded in the selected hospital guide and relevant storyboard notes.";
   } catch (error) {
     renderMessage("assistant", error.message || "Axon is temporarily unavailable. Use the visible guideline.");
     status.textContent = "Chat unavailable; the workflow recommendation remains available.";
