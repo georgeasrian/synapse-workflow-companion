@@ -1,0 +1,260 @@
+/* Persistent selected states: hover must never wash out white button text. */
+button.is-selected:hover:not(:disabled),
+.step-button.is-selected:hover:not(:disabled),
+.view-toggle button.is-selected:hover:not(:disabled) {
+  background: var(--blue-dark, #124e8a);
+  border-color: var(--blue-dark, #124e8a);
+  color: #fff;
+}
+
+#new-patient {
+  display: block;
+  width: min(100%, 420px);
+  margin: 4px auto 20px;
+  padding: 14px 22px;
+  border-color: #0e4275;
+  background: #123f70;
+  color: #fff;
+  font-size: 16px;
+}
+
+#new-patient:hover:not(:disabled) {
+  background: #0e335b;
+  color: #fff;
+}
+
+.workflow-sequence-alert {
+  margin-top: 12px;
+  padding: 11px 13px;
+  border: 1px solid #f0c87b;
+  border-radius: 9px;
+  background: #fff8e8;
+  color: #6d4b0d;
+  font-weight: 700;
+}
+
+.workflow-sequence-alert strong { color: #553600; }
+
+/* Keep each encounter bucket compact; its control labels live in the content below. */
+.step-button small { display: none; }
+
+.imaging-inputs {
+  margin: 0 12px 10px;
+  padding: 10px 12px 12px;
+  border-left: 3px solid #8daec3;
+  background: #f7fbfe;
+  border-radius: 0 8px 8px 0;
+}
+
+.diagnostic-grid { display: grid; gap: 8px; }
+
+.diagnostic-grid .lvo-fieldset {
+  display: grid;
+  grid-template-columns: minmax(145px, 1fr) minmax(170px, auto);
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #d8e5ee;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.diagnostic-grid .lvo-fieldset legend {
+  padding: 0;
+  font-size: 13px;
+  color: #294a64;
+}
+
+.diagnostic-grid .binary-group { justify-content: flex-end; }
+
+/* One clean, aligned action row per diagnostic. */
+.diagnostic-grid .lvo-fieldset {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diagnostic-grid .lvo-fieldset legend {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.diagnostic-grid .binary-group { flex: 0 0 auto; }
+.diagnostic-grid .binary-group button { min-width: 64px; padding: 8px 12px; }
+
+@media (max-width: 560px) {
+  .diagnostic-grid .lvo-fieldset { display: grid; grid-template-columns: 1fr; gap: 7px; }
+  .diagnostic-grid .binary-group { justify-content: flex-start; }
+}
+
+#lkw-elapsed {
+  min-height: 1.2em;
+  color: #245b80;
+  font-weight: 700;
+}
+
+.allergy-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 10px;
+}
+
+#nkda-button { min-width: 78px; padding: 10px 13px; }
+
+@media (max-width: 420px) {
+  .allergy-entry { grid-template-columns: 1fr; }
+  #nkda-button { width: 100%; }
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: start center;
+  padding: min(15vh, 110px) 18px 18px;
+  background: rgba(10, 31, 50, .48);
+}
+
+.modal-backdrop[hidden] { display: none; }
+
+.modal-card {
+  width: min(100%, 480px);
+  padding: 24px;
+  border: 1px solid #bed0df;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(10, 31, 50, .3);
+}
+
+.modal-card h2 { margin: 5px 0 8px; }
+.modal-card p:not(.eyebrow) { margin: 0; color: #43576a; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.danger-action { border-color: #0e4275; background: #123f70; color: #fff; }
+.danger-action:hover:not(:disabled) { background: #0e335b; color: #fff; }
+
+/* Hospital-local diagnostic availability timeline. */
+.availability-timeline {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #dbe7ef;
+}
+
+.availability-timeline-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.availability-timeline h3 { margin: 2px 0 0; color: #163e65; }
+.availability-time-label { margin: 0; color: #315875; font-size: 13px; font-weight: 700; }
+.availability-summary, .availability-caption { margin: 8px 0; color: #597085; font-size: 13px; }
+.availability-caption { margin: 10px 0 0; font-style: italic; }
+
+.availability-chart {
+  display: grid;
+  grid-template-columns: 126px minmax(220px, 1fr) 185px;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #d8e5ee;
+  border-radius: 10px;
+  background: #f8fbfd;
+}
+
+.availability-scale {
+  position: relative;
+  grid-column: 2;
+  height: 19px;
+  color: #587087;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.availability-scale span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.availability-row { display: contents; }
+.availability-row > strong { color: #294a64; font-size: 13px; }
+.availability-track {
+  position: relative;
+  height: 18px;
+  overflow: visible;
+  border-radius: 5px;
+  background-color: #e3ebf1;
+  background-image: linear-gradient(to right, #cad8e3 1px, transparent 1px);
+  background-size: 12.5% 100%;
+}
+.availability-track.is-unknown {
+  background-image: repeating-linear-gradient(135deg, #e2eaf0 0 6px, #f7fafc 6px 12px), linear-gradient(to right, #cad8e3 1px, transparent 1px);
+  background-size: auto, 12.5% 100%;
+}
+.availability-segment { position: absolute; top: 0; bottom: 0; border-radius: 5px; background: #1b639a; }
+.availability-now { position: absolute; z-index: 2; top: -5px; bottom: -5px; width: 2px; border-radius: 2px; background: #b42318; }
+.availability-now::before { content: attr(data-time); position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%); padding: 2px 5px; border-radius: 4px; background: #b42318; color: #fff; font-size: 10px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+.availability-state { color: #486176; font-size: 12px; line-height: 1.25; }
+
+/* Keep the timeline rows together; grid placement on display:contents caused labels and states to drift apart. */
+.availability-chart {
+  display: block;
+  padding: 14px 16px;
+  position: relative;
+}
+
+.availability-scale {
+  margin: 0 197px 7px 126px;
+}
+
+.availability-row {
+  display: grid;
+  grid-template-columns: 126px minmax(180px, 1fr) 185px;
+  gap: 12px;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.availability-row > strong { display: block; }
+.availability-track { min-width: 0; }
+.availability-now {
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: #315875;
+}
+
+/* Consultation time is already stated above the chart; the marker stays intentionally quiet. */
+.availability-now::before { display: none; }
+.availability-now-global { z-index: 3; pointer-events: none; background: #183d5a; }
+.availability-track.is-open .availability-segment { background: #146c43; }
+.availability-track.is-closed .availability-segment { background: #b42318; }
+
+.nihss-entry { display: block; margin: 12px 0 8px; color: #294a64; font-weight: 700; }
+.nihss-entry input { display: block; width: 160px; margin-top: 6px; }
+.nihss-entry small { display: block; margin-top: 5px; color: #587087; font-weight: 400; }
+.nihss-reference-button, .sbar-toggle { border: 0; padding: 0; background: transparent; color: #174f7c; font-weight: 800; text-decoration: underline; cursor: pointer; }
+.nihss-reference-button { margin: 0 0 14px; }
+.sbar-toggle { display: block; width: 100%; text-align: left; padding: 8px 0; font-size: 18px; text-decoration: none; }
+.sbar-toggle::after { content: "⌃"; float: right; }
+#sbar-inputs.is-collapsed #axon-sbar { display: none; }
+#sbar-inputs.is-collapsed .sbar-toggle::after { content: "⌄"; }
+.nihss-modal-card { width: min(100%, 960px); height: min(88vh, 900px); display: flex; flex-direction: column; }
+.modal-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.modal-close { border: 0; background: transparent; color: #315875; font-size: 30px; line-height: 1; cursor: pointer; }
+#nihss-document { width: 100%; flex: 1; min-height: 0; margin-top: 14px; border: 1px solid #c7d8e6; border-radius: 8px; background: #fff; }
+
+@media (max-width: 780px) {
+  .availability-chart { display: block; }
+  .availability-scale { margin: 0 0 7px; }
+  .availability-row { display: grid; grid-template-columns: 1fr; margin: 13px 0; gap: 5px; }
+}
+
+@media (max-width: 780px) {
+  .availability-timeline-heading { align-items: start; flex-direction: column; gap: 3px; }
+  .availability-chart { grid-template-columns: 1fr; gap: 5px; }
+  .availability-scale { grid-column: 1; margin-left: 0; }
+  .availability-row { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 8px 0; }
+  .availability-state { margin-bottom: 2px; }
+}

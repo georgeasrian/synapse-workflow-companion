@@ -1,9 +1,0 @@
-# Quick demo path: Render builds the same Docker image used for AWS deployments.
-services:
-  - type: web
-    name: axon-nudge-api
-    runtime: docker
-    plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
-    healthCheckPath: /health

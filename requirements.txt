@@ -1,5 +1,0 @@
-fastapi>=0.110
-uvicorn>=0.29
-pydantic>=2
-tzdata
-openai          # optional: Azure OpenAI fallback for question routing

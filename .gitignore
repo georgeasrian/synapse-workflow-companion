@@ -1,9 +1,0 @@
-# Environment secrets
-.dev.vars
-.env
-.env.*
-!.env.example
-
-# Dependencies and deployment state
-node_modules/
-.wrangler/
