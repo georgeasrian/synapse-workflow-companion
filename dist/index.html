@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Axon</title>
-    <link rel="stylesheet" href="css/styles.css?v=12" />
-    <link rel="stylesheet" href="css/sbar.css" />
-    <link rel="stylesheet" href="css/workflow-enhancements.css" />
+    <link rel="stylesheet" href="css/styles.css?v=14" />
+    <link rel="stylesheet" href="css/sbar.css?v=13" />
+    <link rel="stylesheet" href="css/workflow-enhancements.css?v=13" />
   </head>
   <body>
-    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> Axon <span>Workflow Companion</span></div><div class="view-toggle" id="view-toggle"><button type="button" data-view="consult" class="is-selected">Consult View</button><button type="button" data-view="rounding">Rounding View</button></div></header>
+    <header class="topbar"><div class="brand"><span class="brand-mark">✦</span> Axon <span>Workflow Companion</span></div><div class="view-toggle" id="view-toggle"><button type="button" data-view="consult" class="is-selected">Consult View</button><button type="button" data-view="rounding">Rounding View</button></div><button type="button" id="support-button" class="support-button">Customer Support</button></header>
     <main class="layout">
       <section class="main-column" id="consult-view">
         <div class="case-head"><div><p class="eyebrow">Active consultation</p><h1>Acute stroke workflow</h1><p>Hospital-specific guidance follows the selected guide and encounter state.</p></div><span class="status-pill">● In progress</span></div>
@@ -35,8 +35,8 @@
       window.addEventListener("unhandledrejection", event => { document.querySelector("#import-status").textContent = "Startup error: " + (event.reason?.message || event.reason); });
     </script>
     <script src="js/config.js"></script>
-    <script type="module" src="js/app.js?v=12"></script>
-    <script type="module" src="js/chat.js"></script>
-    <script type="module" src="js/workflow-polish.js"></script>
+    <script type="module" src="js/app.js?v=13"></script>
+    <script type="module" src="js/chat.js?v=13"></script>
+    <script type="module" src="js/workflow-polish.js?v=13"></script>
   </body>
 </html>
