@@ -27,8 +27,13 @@ function setAvailability() {
   const ready = Boolean(context.hospital && context.guidelineRows.length);
   input.disabled = !ready;
   submit.disabled = !ready;
-  if (!ready) status.textContent = "Select a hospital to ask Axon.";
-  else if (!status.dataset.loading) status.textContent = `Grounded in ${context.hospital.name} (${context.hospital.id}).`;
+  if (!ready) {
+    input.placeholder = "Select a hospital to unlock Ask Axon.";
+    status.textContent = "Select a hospital first — Axon answers only from that hospital’s loaded guideline.";
+  } else if (!status.dataset.loading) {
+    input.placeholder = "e.g., What is this hospital's LVO escalation pathway?";
+    status.textContent = `Grounded in ${context.hospital.name} (${context.hospital.id}).`;
+  }
 }
 
 window.addEventListener("axon:context", event => {
@@ -40,7 +45,16 @@ form.addEventListener("submit", async event => {
   event.preventDefault();
   const question = input.value.trim();
   const base = String(window.AXON_CHAT_API_BASE_URL || "").replace(/\/$/, "");
-  if (!question || !context.hospital || !base) return;
+  if (!question) return;
+  if (!context.hospital) {
+    status.textContent = "Select a hospital before sending so Axon can ground the answer in that guide.";
+    input.focus();
+    return;
+  }
+  if (!base) {
+    status.textContent = "Chat is not configured. The hospital guideline remains available on screen.";
+    return;
+  }
   renderMessage("user", question);
   conversation.push({ role: "user", content: question });
   input.value = "";
